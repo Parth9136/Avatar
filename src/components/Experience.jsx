@@ -5,15 +5,29 @@ import { useControls } from "leva";
 export const Experience = () => {
   const { animation } = useControls({
     animation: {
-      value: "Idle",
-      options: ["Idle", "Angry", "Frustrated", "Stressed", "Happy", "Sad","Surprised"],
+      value: "Standing",
+      options: [
+        "Amusement",
+        "Awe",
+        "Enthusiasm",
+        "Liking",
+        "Surprised",
+        "Angry",
+        "Disgust",
+        "Fear",
+        "Sad",
+        "Standing",
+        "Sitting",
+        "Walking",
+        "Running",
+      ],
     },
   });
 
   return (
     <>
       <OrbitControls />
-      <group position-y={-1.2} scale={1.2}>
+      <group position-y={-0.2} scale={1.2}>
         <Avatar animation={animation} />
       </group>
       <ambientLight intensity={3} />

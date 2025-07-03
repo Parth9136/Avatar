@@ -29,21 +29,41 @@ export function Avatar(props) {
   const { animations: SadIdle } = useFBX("animations/Sad Idle.fbx");
   const { animations: Idle } = useFBX("animations/Idle.fbx");
   const { animations : Surprised } = useFBX("animations/Surprised.fbx")
+  const { animations : Liking } = useFBX("animations/Liking.fbx")
+  const { animations : Amusement } = useFBX("animations/Amusement.fbx")
+  const { animations : Walking } = useFBX("animations/Walking.fbx")
+  const { animations : Running } = useFBX("animations/Running.fbx")
+  const { animations : Fear } = useFBX("animations/Fear.fbx")
+  const { animations : Sitting } = useFBX("animations/Sitting.fbx")
+  
 
   Angry[0].name = "Angry";
-  Frustrated[0].name = "Frustrated";
-  Stressed[0].name = "Stressed";
-  JoyfulJump[0].name = "Happy";
+  Frustrated[0].name = "Disgust";
+  Stressed[0].name = "Awe";
+  JoyfulJump[0].name = "Enthusiasm";
   SadIdle[0].name = "Sad";
-  Idle[0].name = "Idle";
+  Idle[0].name = "Standing";
   Surprised[0].name = "Surprised";
+  Liking[0].name = "Liking";
+  Amusement[0].name = "Amusement";
+  Walking[0].name = "Walking";
+  Running[0].name = "Running";
+  Fear[0].name = "Fear";
+  Sitting[0].name = "Sitting";
 
   const { actions } = useAnimations(
-    [Idle[0], Angry[0], Frustrated[0], Stressed[0], JoyfulJump[0], SadIdle[0],Surprised[0]],
+    [Idle[0], Angry[0], Frustrated[0], Stressed[0], JoyfulJump[0], SadIdle[0],Surprised[0],Liking[0],Amusement[0],Walking[0],Running[0],Fear[0],Sitting[0]],
     group
   );
 
   useFrame((state) => {
+  const hips = group.current.getObjectByName("Hips");
+  if (hips) {
+    // ✅ Keep hips bone centered every frame
+    hips.position.set(0, 0, 0);
+    hips.updateMatrixWorld(true); // Necessary to apply the change
+  }
+
     if (headFollow) {
       group.current.getObjectByName("Head").lookAt(state.camera.position);
     }
@@ -54,6 +74,12 @@ export function Avatar(props) {
   });
 
   useEffect(() => {
+    const hips = group.current.getObjectByName("Hips");
+
+  if (hips) {
+    hips.position.set(0, 0, 0);
+    hips.rotation.set(0, 0, 0);
+  }
     actions[animation].reset().play();
     return () => {
       actions[animation].reset().stop();
