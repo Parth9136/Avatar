@@ -28,7 +28,7 @@ export function Avatar(props) {
   const { animations: JoyfulJump } = useFBX("animations/Joyful Jump.fbx");
   const { animations: SadIdle } = useFBX("animations/Sad Idle.fbx");
   const { animations: Idle } = useFBX("animations/Idle.fbx");
-  const { animation : Surprise } = useFBX("animations/Surprised.fbx")
+  const { animations : Surprised } = useFBX("animations/Surprised.fbx")
 
   Angry[0].name = "Angry";
   Frustrated[0].name = "Frustrated";
@@ -36,10 +36,10 @@ export function Avatar(props) {
   JoyfulJump[0].name = "Happy";
   SadIdle[0].name = "Sad";
   Idle[0].name = "Idle";
-  Surprise[0].name = "Surprise";
+  Surprised[0].name = "Surprised";
 
   const { actions } = useAnimations(
-    [Idle[0], Angry[0], Frustrated[0], Stressed[0], JoyfulJump[0], SadIdle[0],Surprise[0]],
+    [Idle[0], Angry[0], Frustrated[0], Stressed[0], JoyfulJump[0], SadIdle[0],Surprised[0]],
     group
   );
 

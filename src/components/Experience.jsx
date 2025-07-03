@@ -6,7 +6,7 @@ export const Experience = () => {
   const { animation } = useControls({
     animation: {
       value: "Idle",
-      options: ["Idle", "Angry", "Frustrated", "Stressed", "Happy", "Sad"],
+      options: ["Idle", "Angry", "Frustrated", "Stressed", "Happy", "Sad","Surprised"],
     },
   });
 
