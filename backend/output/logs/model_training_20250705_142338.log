@@ -1,0 +1,9 @@
+2025-07-05 14:23:40,797 - WARNING -  * Debugger is active!
+2025-07-05 14:23:40,802 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 14:24:03,219 - INFO - 127.0.0.1 - - [05/Jul/2025 14:24:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 14:25:02,902 - INFO - 127.0.0.1 - - [05/Jul/2025 14:25:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 14:26:03,211 - INFO - 127.0.0.1 - - [05/Jul/2025 14:26:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 14:27:02,921 - INFO - 127.0.0.1 - - [05/Jul/2025 14:27:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 14:28:03,231 - INFO - 127.0.0.1 - - [05/Jul/2025 14:28:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 14:29:02,903 - INFO - 127.0.0.1 - - [05/Jul/2025 14:29:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 14:29:49,350 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\model.py', reloading
