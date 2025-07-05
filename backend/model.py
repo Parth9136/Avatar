@@ -56,8 +56,8 @@ print("🔧 INITIALIZING COMPLETE DATA PROCESSING SYSTEM")
 print("=" * 60)
 
 # Create project directory structure
-output_dir = Path('/Users/sharvary_hh/Documents/6th Sem/Interdisciplinary EL/Project/model/output')
-output_dir.mkdir(exist_ok=True)
+output_dir = Path(__file__).parent / "output"
+output_dir.mkdir(parents=True, exist_ok=True)
 
 # Create subdirectories
 subdirs = ['data', 'logs', 'plots', 'reports', 'configs', 'models', 'weights']

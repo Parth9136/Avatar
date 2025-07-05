@@ -1,0 +1,5 @@
+2025-07-05 13:15:19,609 - WARNING -  * Debugger is active!
+2025-07-05 13:15:19,609 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 13:15:19,640 - INFO - 127.0.0.1 - - [05/Jul/2025 13:15:19] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 13:15:20,220 - INFO - 127.0.0.1 - - [05/Jul/2025 13:15:20] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 13:15:22,899 - INFO - 127.0.0.1 - - [05/Jul/2025 13:15:22] "GET /current_emotion HTTP/1.1" 200 -

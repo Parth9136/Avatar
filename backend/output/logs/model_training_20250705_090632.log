@@ -1,0 +1,4 @@
+2025-07-05 09:06:33,260 - WARNING -  * Debugger is active!
+2025-07-05 09:06:33,275 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 09:06:45,849 - INFO -  * Detected change in 'E:\\Coding Tools\\Anaconda\\Lib\\site-packages\\numpy\\core\\_methods.py', reloading
+2025-07-05 09:06:45,854 - INFO - 127.0.0.1 - - [05/Jul/2025 09:06:45] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

@@ -1,0 +1,13 @@
+2025-07-05 09:06:49,615 - WARNING -  * Debugger is active!
+2025-07-05 09:06:49,630 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 09:06:52,876 - INFO - 127.0.0.1 - - [05/Jul/2025 09:06:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:06:59,920 - INFO - 127.0.0.1 - - [05/Jul/2025 09:06:59] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:07:03,213 - INFO - 127.0.0.1 - - [05/Jul/2025 09:07:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:07:06,969 - INFO - 127.0.0.1 - - [05/Jul/2025 09:07:06] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:07:14,006 - INFO - 127.0.0.1 - - [05/Jul/2025 09:07:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:07:21,101 - INFO - 127.0.0.1 - - [05/Jul/2025 09:07:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:07:28,161 - INFO - 127.0.0.1 - - [05/Jul/2025 09:07:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:08:02,913 - INFO - 127.0.0.1 - - [05/Jul/2025 09:08:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:09:03,223 - INFO - 127.0.0.1 - - [05/Jul/2025 09:09:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:09:40,800 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\simulator.py', reloading
+2025-07-05 09:09:40,800 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\simulator.py', reloading

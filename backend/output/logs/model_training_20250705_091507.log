@@ -1,0 +1,32 @@
+2025-07-05 09:15:08,297 - WARNING -  * Debugger is active!
+2025-07-05 09:15:08,306 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 09:15:08,326 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:08] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:08,331 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:08] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:12,217 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:12] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:12,250 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:12] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:14,325 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:14] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:18,206 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:18] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:20,902 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:20] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:24,209 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:24] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:26,905 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:26] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:30,209 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:30] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:32,905 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:32] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:36,204 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:36] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:38,906 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:38] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:42,210 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:42] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:44,907 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:44] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:48,224 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:48] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:50,905 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:50] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:54,209 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:54] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:15:56,898 - INFO - 127.0.0.1 - - [05/Jul/2025 09:15:56] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:16:00,221 - INFO - 127.0.0.1 - - [05/Jul/2025 09:16:00] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:16:02,899 - INFO - 127.0.0.1 - - [05/Jul/2025 09:16:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:16:06,211 - INFO - 127.0.0.1 - - [05/Jul/2025 09:16:06] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:16:08,905 - INFO - 127.0.0.1 - - [05/Jul/2025 09:16:08] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:16:12,205 - INFO - 127.0.0.1 - - [05/Jul/2025 09:16:12] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:16:14,897 - INFO - 127.0.0.1 - - [05/Jul/2025 09:16:14] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:17:03,223 - INFO - 127.0.0.1 - - [05/Jul/2025 09:17:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:18:02,903 - INFO - 127.0.0.1 - - [05/Jul/2025 09:18:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:18:20,146 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\simulator.py', reloading
+2025-07-05 09:18:20,146 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\simulator.py', reloading
+2025-07-05 09:18:20,146 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\simulator.py', reloading

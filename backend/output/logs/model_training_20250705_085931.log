@@ -1,0 +1,5 @@
+2025-07-05 08:59:32,398 - WARNING -  * Debugger is active!
+2025-07-05 08:59:32,406 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 08:59:57,424 - INFO -  * Detected change in 'E:\\Coding Tools\\Anaconda\\Lib\\site-packages\\flask\\app.py', reloading
+2025-07-05 08:59:57,465 - INFO -  * Detected change in 'E:\\Coding Tools\\Anaconda\\Lib\\site-packages\\numpy\\core\\fromnumeric.py', reloading
+2025-07-05 08:59:57,472 - INFO - 127.0.0.1 - - [05/Jul/2025 08:59:57] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

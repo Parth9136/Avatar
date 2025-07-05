@@ -1,0 +1,19 @@
+2025-07-05 09:13:01,630 - WARNING -  * Debugger is active!
+2025-07-05 09:13:01,646 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 09:13:03,214 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:07,739 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:07] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:08,640 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:08] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:11,320 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:11] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:15,208 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:15] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:17,902 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:17] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:21,212 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:21] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:23,910 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:23] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:27,217 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:27] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:29,907 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:29] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:33,217 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:33] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:35,898 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:35] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:39,212 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:39] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:41,901 - INFO - 127.0.0.1 - - [05/Jul/2025 09:13:41] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:13:43,608 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\emotion_state.py', reloading
+2025-07-05 09:13:43,624 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\emotion_state.py', reloading
+2025-07-05 09:13:43,625 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\emotion_state.py', reloading

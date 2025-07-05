@@ -4,10 +4,10 @@ Command: npx gltfjsx@6.5.3 public/models/6847cd86a6d7944841bd528a.glb
 */
 
 import React, { useRef, useEffect } from "react";
-import { useFrame, useGraph } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { useAnimations, useGLTF, useFBX } from "@react-three/drei";
-import { SkeletonUtils } from "three-stdlib";
 import { useControls } from "leva";
+import * as THREE from "three";
 
 export function Avatar(props) {
   const { animation } = props;
@@ -16,27 +16,26 @@ export function Avatar(props) {
     headFollow: false,
     cursorFollow: false,
   });
+
   const group = useRef();
-
   const { nodes, materials } = useGLTF("models/6847cd86a6d7944841bd528a.glb");
-  // const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
-  // const { nodes, materials } = useGraph(clone);
 
+  // Load animations
   const { animations: Angry } = useFBX("animations/Angry.fbx");
   const { animations: Frustrated } = useFBX("animations/Frustrated.fbx");
   const { animations: Stressed } = useFBX("animations/Stressed.fbx");
   const { animations: JoyfulJump } = useFBX("animations/Joyful Jump.fbx");
   const { animations: SadIdle } = useFBX("animations/Sad Idle.fbx");
   const { animations: Idle } = useFBX("animations/Idle.fbx");
-  const { animations : Surprised } = useFBX("animations/Surprised.fbx")
-  const { animations : Liking } = useFBX("animations/Liking.fbx")
-  const { animations : Amusement } = useFBX("animations/Amusement.fbx")
-  const { animations : Walking } = useFBX("animations/Walking.fbx")
-  const { animations : Running } = useFBX("animations/Running.fbx")
-  const { animations : Fear } = useFBX("animations/Fear.fbx")
-  const { animations : Sitting } = useFBX("animations/Sitting.fbx")
-  
+  const { animations: Surprised } = useFBX("animations/Surprised.fbx");
+  const { animations: Liking } = useFBX("animations/Liking.fbx");
+  const { animations: Amusement } = useFBX("animations/Amusement.fbx");
+  const { animations: Walking } = useFBX("animations/Walking.fbx");
+  const { animations: Running } = useFBX("animations/Running.fbx");
+  const { animations: Fear } = useFBX("animations/Fear.fbx");
+  const { animations: Sitting } = useFBX("animations/Sitting.fbx");
 
+  // Rename for compatibility
   Angry[0].name = "Angry";
   Frustrated[0].name = "Disgust";
   Stressed[0].name = "Awe";
@@ -52,109 +51,281 @@ export function Avatar(props) {
   Sitting[0].name = "Sitting";
 
   const { actions } = useAnimations(
-    [Idle[0], Angry[0], Frustrated[0], Stressed[0], JoyfulJump[0], SadIdle[0],Surprised[0],Liking[0],Amusement[0],Walking[0],Running[0],Fear[0],Sitting[0]],
+    [
+      Idle[0], Angry[0], Frustrated[0], Stressed[0],
+      JoyfulJump[0], SadIdle[0], Surprised[0], Liking[0],
+      Amusement[0], Walking[0], Running[0], Fear[0], Sitting[0]
+    ],
     group
   );
 
+  useEffect(() => {
+    const hips = group.current.getObjectByName("Hips");
+    if (hips) {
+      hips.position.set(0, 0, 0);
+      hips.rotation.set(0, 0, 0);
+    }
+
+    console.log("🎭 Switching to animation:", animation);
+    actions[animation]?.reset().fadeIn(0.3).play();
+
+    return () => {
+      actions[animation]?.fadeOut(0.3).stop();
+    };
+  }, [animation]);
+
   useFrame((state) => {
-  const hips = group.current.getObjectByName("Hips");
-  if (hips) {
-    // ✅ Keep hips bone centered every frame
-    hips.position.set(0, 0, 0);
-    hips.updateMatrixWorld(true); // Necessary to apply the change
-  }
+    const hips = group.current.getObjectByName("Hips");
+    if (hips) {
+      hips.position.set(0, 0, 0);
+      hips.updateMatrixWorld(true);
+    }
 
     if (headFollow) {
-      group.current.getObjectByName("Head").lookAt(state.camera.position);
+      group.current.getObjectByName("Head")?.lookAt(state.camera.position);
     }
     if (cursorFollow) {
       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-      group.current.getObjectByName("Spine2").lookAt(target);
+      group.current.getObjectByName("Spine2")?.lookAt(target);
     }
   });
-
-  useEffect(() => {
-    const hips = group.current.getObjectByName("Hips");
-
-  if (hips) {
-    hips.position.set(0, 0, 0);
-    hips.rotation.set(0, 0, 0);
-  }
-    actions[animation].reset().play();
-    return () => {
-      actions[animation].reset().stop();
-    };
-  }, [animation]);
 
   return (
     <group {...props} ref={group} dispose={null}>
       <group rotation-x={-Math.PI / 2}>
         <primitive object={nodes.Hips} />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Hair.geometry}
-          material={materials.Wolf3D_Hair}
-          skeleton={nodes.Wolf3D_Hair.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Glasses.geometry}
-          material={materials.Wolf3D_Glasses}
-          skeleton={nodes.Wolf3D_Glasses.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Body.geometry}
-          material={materials.Wolf3D_Body}
-          skeleton={nodes.Wolf3D_Body.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
-          material={materials.Wolf3D_Outfit_Bottom}
-          skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
-          material={materials.Wolf3D_Outfit_Footwear}
-          skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Outfit_Top.geometry}
-          material={materials.Wolf3D_Outfit_Top}
-          skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
-        />
-        <skinnedMesh
-          name="EyeLeft"
-          geometry={nodes.EyeLeft.geometry}
-          material={materials.Wolf3D_Eye}
-          skeleton={nodes.EyeLeft.skeleton}
-          morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
-          morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
-        />
-        <skinnedMesh
-          name="EyeRight"
-          geometry={nodes.EyeRight.geometry}
-          material={materials.Wolf3D_Eye}
-          skeleton={nodes.EyeRight.skeleton}
-          morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
-          morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
-        />
-        <skinnedMesh
-          name="Wolf3D_Head"
-          geometry={nodes.Wolf3D_Head.geometry}
-          material={materials.Wolf3D_Skin}
-          skeleton={nodes.Wolf3D_Head.skeleton}
-          morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
-          morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
-        />
-        <skinnedMesh
-          name="Wolf3D_Teeth"
-          geometry={nodes.Wolf3D_Teeth.geometry}
-          material={materials.Wolf3D_Teeth}
-          skeleton={nodes.Wolf3D_Teeth.skeleton}
-          morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
-          morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
-        />
+        <skinnedMesh geometry={nodes.Wolf3D_Hair.geometry} material={materials.Wolf3D_Hair} skeleton={nodes.Wolf3D_Hair.skeleton} />
+        <skinnedMesh geometry={nodes.Wolf3D_Glasses.geometry} material={materials.Wolf3D_Glasses} skeleton={nodes.Wolf3D_Glasses.skeleton} />
+        <skinnedMesh geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
+        <skinnedMesh geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
+        <skinnedMesh geometry={nodes.Wolf3D_Outfit_Footwear.geometry} material={materials.Wolf3D_Outfit_Footwear} skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton} />
+        <skinnedMesh geometry={nodes.Wolf3D_Outfit_Top.geometry} material={materials.Wolf3D_Outfit_Top} skeleton={nodes.Wolf3D_Outfit_Top.skeleton} />
+        <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary} morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences} />
+        <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} morphTargetDictionary={nodes.EyeRight.morphTargetDictionary} morphTargetInfluences={nodes.EyeRight.morphTargetInfluences} />
+        <skinnedMesh name="Wolf3D_Head" geometry={nodes.Wolf3D_Head.geometry} material={materials.Wolf3D_Skin} skeleton={nodes.Wolf3D_Head.skeleton} morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences} />
+        <skinnedMesh name="Wolf3D_Teeth" geometry={nodes.Wolf3D_Teeth.geometry} material={materials.Wolf3D_Teeth} skeleton={nodes.Wolf3D_Teeth.skeleton} morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences} />
       </group>
     </group>
   );
 }
 
 useGLTF.preload("models/6847cd86a6d7944841bd528a.glb");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /*
+// Auto-generated by: https://github.com/pmndrs/gltfjsx
+// Command: npx gltfjsx@6.5.3 public/models/6847cd86a6d7944841bd528a.glb 
+// */
+
+// import React, { useRef, useEffect } from "react";
+// import { useFrame, useGraph } from "@react-three/fiber";
+// import { useAnimations, useGLTF, useFBX } from "@react-three/drei";
+// import { SkeletonUtils } from "three-stdlib";
+// import { useControls } from "leva";
+
+// export function Avatar(props) {
+//   const { animation } = props;
+
+//   const { headFollow, cursorFollow } = useControls({
+//     headFollow: false,
+//     cursorFollow: false,
+//   });
+//   const group = useRef();
+
+//   const { nodes, materials } = useGLTF("models/6847cd86a6d7944841bd528a.glb");
+//   // const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
+//   // const { nodes, materials } = useGraph(clone);
+
+//   const { animations: Angry } = useFBX("animations/Angry.fbx");
+//   const { animations: Frustrated } = useFBX("animations/Frustrated.fbx");
+//   const { animations: Stressed } = useFBX("animations/Stressed.fbx");
+//   const { animations: JoyfulJump } = useFBX("animations/Joyful Jump.fbx");
+//   const { animations: SadIdle } = useFBX("animations/Sad Idle.fbx");
+//   const { animations: Idle } = useFBX("animations/Idle.fbx");
+//   const { animations : Surprised } = useFBX("animations/Surprised.fbx")
+//   const { animations : Liking } = useFBX("animations/Liking.fbx")
+//   const { animations : Amusement } = useFBX("animations/Amusement.fbx")
+//   const { animations : Walking } = useFBX("animations/Walking.fbx")
+//   const { animations : Running } = useFBX("animations/Running.fbx")
+//   const { animations : Fear } = useFBX("animations/Fear.fbx")
+//   const { animations : Sitting } = useFBX("animations/Sitting.fbx")
+  
+
+//   Angry[0].name = "Angry";
+//   Frustrated[0].name = "Disgust";
+//   Stressed[0].name = "Awe";
+//   JoyfulJump[0].name = "Enthusiasm";
+//   SadIdle[0].name = "Sad";
+//   Idle[0].name = "Standing";
+//   Surprised[0].name = "Surprised";
+//   Liking[0].name = "Liking";
+//   Amusement[0].name = "Amusement";
+//   Walking[0].name = "Walking";
+//   Running[0].name = "Running";
+//   Fear[0].name = "Fear";
+//   Sitting[0].name = "Sitting";
+
+//   const { actions } = useAnimations(
+//     [Idle[0], Angry[0], Frustrated[0], Stressed[0], JoyfulJump[0], SadIdle[0],Surprised[0],Liking[0],Amusement[0],Walking[0],Running[0],Fear[0],Sitting[0]],
+//     group
+//   );
+
+//   useFrame((state) => {
+//   const hips = group.current.getObjectByName("Hips");
+//   if (hips) {
+//     // ✅ Keep hips bone centered every frame
+//     hips.position.set(0, 0, 0);
+//     hips.updateMatrixWorld(true); // Necessary to apply the change
+//   }
+
+//     if (headFollow) {
+//       group.current.getObjectByName("Head").lookAt(state.camera.position);
+//     }
+//     if (cursorFollow) {
+//       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
+//       group.current.getObjectByName("Spine2").lookAt(target);
+//     }
+//   });
+
+//   useEffect(() => {
+//     const hips = group.current.getObjectByName("Hips");
+
+//   if (hips) {
+//     hips.position.set(0, 0, 0);
+//     hips.rotation.set(0, 0, 0);
+//   }
+//     actions[animation].reset().play();
+//     return () => {
+//       actions[animation].reset().stop();
+//     };
+//   }, [animation]);
+
+//   return (
+//     <group {...props} ref={group} dispose={null}>
+//       <group rotation-x={-Math.PI / 2}>
+//         <primitive object={nodes.Hips} />
+//         <skinnedMesh
+//           geometry={nodes.Wolf3D_Hair.geometry}
+//           material={materials.Wolf3D_Hair}
+//           skeleton={nodes.Wolf3D_Hair.skeleton}
+//         />
+//         <skinnedMesh
+//           geometry={nodes.Wolf3D_Glasses.geometry}
+//           material={materials.Wolf3D_Glasses}
+//           skeleton={nodes.Wolf3D_Glasses.skeleton}
+//         />
+//         <skinnedMesh
+//           geometry={nodes.Wolf3D_Body.geometry}
+//           material={materials.Wolf3D_Body}
+//           skeleton={nodes.Wolf3D_Body.skeleton}
+//         />
+//         <skinnedMesh
+//           geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
+//           material={materials.Wolf3D_Outfit_Bottom}
+//           skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
+//         />
+//         <skinnedMesh
+//           geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
+//           material={materials.Wolf3D_Outfit_Footwear}
+//           skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
+//         />
+//         <skinnedMesh
+//           geometry={nodes.Wolf3D_Outfit_Top.geometry}
+//           material={materials.Wolf3D_Outfit_Top}
+//           skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
+//         />
+//         <skinnedMesh
+//           name="EyeLeft"
+//           geometry={nodes.EyeLeft.geometry}
+//           material={materials.Wolf3D_Eye}
+//           skeleton={nodes.EyeLeft.skeleton}
+//           morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
+//           morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
+//         />
+//         <skinnedMesh
+//           name="EyeRight"
+//           geometry={nodes.EyeRight.geometry}
+//           material={materials.Wolf3D_Eye}
+//           skeleton={nodes.EyeRight.skeleton}
+//           morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
+//           morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
+//         />
+//         <skinnedMesh
+//           name="Wolf3D_Head"
+//           geometry={nodes.Wolf3D_Head.geometry}
+//           material={materials.Wolf3D_Skin}
+//           skeleton={nodes.Wolf3D_Head.skeleton}
+//           morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
+//           morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
+//         />
+//         <skinnedMesh
+//           name="Wolf3D_Teeth"
+//           geometry={nodes.Wolf3D_Teeth.geometry}
+//           material={materials.Wolf3D_Teeth}
+//           skeleton={nodes.Wolf3D_Teeth.skeleton}
+//           morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
+//           morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
+//         />
+//       </group>
+//     </group>
+//   );
+// }
+
+// useGLTF.preload("models/6847cd86a6d7944841bd528a.glb");

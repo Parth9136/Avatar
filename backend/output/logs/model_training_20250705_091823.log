@@ -1,0 +1,36 @@
+2025-07-05 09:18:24,160 - WARNING -  * Debugger is active!
+2025-07-05 09:18:24,162 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 09:19:03,228 - INFO - 127.0.0.1 - - [05/Jul/2025 09:19:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:20:02,902 - INFO - 127.0.0.1 - - [05/Jul/2025 09:20:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:21:03,213 - INFO - 127.0.0.1 - - [05/Jul/2025 09:21:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:22:02,910 - INFO - 127.0.0.1 - - [05/Jul/2025 09:22:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:23:03,223 - INFO - 127.0.0.1 - - [05/Jul/2025 09:23:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:24:02,902 - INFO - 127.0.0.1 - - [05/Jul/2025 09:24:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:24:24,816 - INFO - 127.0.0.1 - - [05/Jul/2025 09:24:24] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:24:31,900 - INFO - 127.0.0.1 - - [05/Jul/2025 09:24:31] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:24:38,962 - INFO - 127.0.0.1 - - [05/Jul/2025 09:24:38] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:24:46,033 - INFO - 127.0.0.1 - - [05/Jul/2025 09:24:46] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:24:53,091 - INFO - 127.0.0.1 - - [05/Jul/2025 09:24:53] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:00,140 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:03,224 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:25:07,221 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:07] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:14,297 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:21,369 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:28,454 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:35,511 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:42,581 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:42] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:49,655 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:25:56,722 - INFO - 127.0.0.1 - - [05/Jul/2025 09:25:56] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:02,899 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:02] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:26:03,786 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:03] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:10,836 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:10] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:17,912 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:17] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:24,960 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:24] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:32,024 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:32] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:39,090 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:39] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:46,137 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:46] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:26:53,201 - INFO - 127.0.0.1 - - [05/Jul/2025 09:26:53] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:27:00,266 - INFO - 127.0.0.1 - - [05/Jul/2025 09:27:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:27:03,209 - INFO - 127.0.0.1 - - [05/Jul/2025 09:27:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:27:26,853 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\emotion_api.py', reloading
+2025-07-05 09:27:26,853 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\emotion_api.py', reloading

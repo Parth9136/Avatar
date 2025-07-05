@@ -1,0 +1,15 @@
+2025-07-05 09:11:31,162 - WARNING -  * Debugger is active!
+2025-07-05 09:11:31,165 - INFO -  * Debugger PIN: 226-352-327
+2025-07-05 09:11:46,191 - INFO - 127.0.0.1 - - [05/Jul/2025 09:11:46] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:11:53,266 - INFO - 127.0.0.1 - - [05/Jul/2025 09:11:53] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:00,305 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:03,207 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:03] "GET /current_emotion HTTP/1.1" 200 -
+2025-07-05 09:12:07,344 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:07] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:14,437 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:21,484 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:28,561 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:35,604 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:42,673 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:42] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:49,720 - INFO - 127.0.0.1 - - [05/Jul/2025 09:12:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-05 09:12:57,967 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\simulator.py', reloading
+2025-07-05 09:12:57,967 - INFO -  * Detected change in 'E:\\Creativity\\3D Characters\\3D Portofolio React 3 fiber\\r3f-portfolio-animation\\backend\\simulator.py', reloading
