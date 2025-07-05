@@ -1,2 +1,2 @@
 # backend/emotion_state.py
-current_emotion = "Amusement"
+current_emotion = "Liking"
